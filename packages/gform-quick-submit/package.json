@@ -1,0 +1,35 @@
+{
+  "name": "gform-quick-submit",
+  "description": "This is a package that allows you to quickly submit data to Google Forms. With this tool, you can easily integrate features like contact forms into your website. Since Google Forms can be used for free, it's perfect for beginners as well.",
+  "version": "0.0.1-beta-20241216-0001",
+  "main": "src/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests yet!\""
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Fun117 <fun117.kun@gmail.com> (https://fun117.dev)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fun117/gform-quick-submit.git",
+    "directory": "packages/gform-quick-submit"
+  },
+  "bugs": {
+    "url": "https://github.com/fun117/gform-quick-submit/issues",
+    "email": "fun117.kun@gmail.com"
+  },
+  "homepage": "https://gform-quick-submit.fun117.dev",
+  "license": "MIT",
+  "keywords": [
+    "google form",
+    "submit",
+    "quick submit"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^4.4.4"
+  }
+}
