@@ -69,6 +69,7 @@
         "demo": "View Demo",
         "parse_tool": "Parse Tool",
         "install": "Install",
+        "document": "Document",
         "source": "Source Code"
       }
     },
