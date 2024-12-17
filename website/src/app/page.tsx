@@ -2,6 +2,7 @@
 
 import { Button, Link } from "@nextui-org/react";
 import {
+  Book,
   BookText,
   CirclePlay,
   Download,
@@ -45,7 +46,16 @@ export default function Page() {
                 </Button>
               </Link>
               <Link
-                href="https://github.com/Fun117/gform-quick-submit/tree/mai/packages/gform-quick-submit"
+                href="https://github.com/Fun117/gform-quick-submit/wiki"
+                target="_blank"
+              >
+                <Button variant="ghost">
+                  <Book className="w-5" />
+                  <span>{t("buttons.document")}</span>
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/Fun117/gform-quick-submit"
                 target="_blank"
               >
                 <Button variant="ghost">
