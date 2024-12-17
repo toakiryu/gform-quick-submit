@@ -1,0 +1,137 @@
+{
+  "Metadata": {
+    "title": "GForm Quick Submit",
+    "description": "This is a package that allows you to quickly submit data to Google Forms. With this tool, you can easily integrate features like contact forms into your website. Since Google Forms can be used for free, it's perfect for beginners as well."
+  },
+  "PageError": {
+    "title": "Unknown error",
+    "retry": "Retry"
+  },
+  "PageNotFound": {
+    "title": "Page not found"
+  },
+  "Theme": {
+    "Toggle theme": "Toggle theme",
+    "Mode": "Mode",
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System"
+  },
+  "Languages": {
+    "Language": "Language",
+    "Select a language": "Select a language"
+  },
+  "SearchCommand": {
+    "Search website&#46;&#46;&#46;": "Search website...",
+    "Search&#46;&#46;&#46;": "Search...",
+    "No results found&#46;": "No results found.",
+    "Type a command or search&#46;&#46;&#46;": "Type a command or search...",
+    "items": {
+      "Pages": "Pages",
+      "Home": "Home",
+      "About": "About"
+    }
+  },
+  "Footer": {
+    "footerText": "Copyright © 2024 Fun117. All rights reserved.",
+    "items": {
+      "Resources": "Resources",
+      "Docs": "Docs",
+      "Learn": "Learn",
+      "Showcase": "Showcase",
+      "Blog": "Blog",
+      "Analytics": "Analytics",
+      "Next&#46;js Conf": "Next.js Conf",
+      "Previews": "Previews",
+      "More": "More",
+      "Next&#46;js Commerce": "Next.js Commerce",
+      "Contact Sales": "Contact Sales",
+      "Releases": "Releases",
+      "Telemetry": "Telemetry",
+      "Governance": "Governance",
+      "About Vercel": "About Vercel",
+      "Next&#46;js + Vercel": "Next.js + Vercel",
+      "Open Source Software": "Open Source Software"
+    }
+  },
+  "Home": "Home",
+  "About": "About",
+  "footer": {
+    "footerText": "Copyright © 2024 Fun117. All rights reserved."
+  },
+  "pages": {
+    "home": {
+      "metadata": {
+        "title": "GForm Quick Submit",
+        "description": "This is a package that allows you to quickly submit data to Google Forms. With this tool, you can easily integrate features like contact forms into your website. Since Google Forms can be used for free, it's perfect for beginners as well."
+      },
+      "buttons": {
+        "demo": "View Demo",
+        "parse_tool": "Parse Tool",
+        "install": "Install",
+        "source": "Source Code"
+      }
+    },
+    "entriesparse": {
+      "test": "TEST",
+      "title": "Google Form Parsing Tool",
+      "placeholder": "https://docs.google.com/forms/d/e/**********/viewform",
+      "submitButton": "Parse Form",
+      "resultsTitle": "Parsing Results",
+      "table": {
+        "label": "Label",
+        "id": "ID (Key)"
+      },
+      "codePreviewLabel": "Form",
+      "error": {
+        "urlInvalid": "Please enter a valid URL.",
+        "googleFormUrl": "Please enter a Google Form URL."
+      },
+      "loading": "Loading..."
+    },
+    "sample": {
+      "form": {
+        "title": "Demo Form",
+        "fields": {
+          "company": "Company (Optional)",
+          "name": "Name",
+          "name-placeholder": "Guest",
+          "email": "Email Address",
+          "message": "Message",
+          "message-placeholder": "Hello World!"
+        },
+        "errors": {
+          "nameRequired": "Please enter your name",
+          "emailInvalid": "Please enter a valid email address",
+          "messageRequired": "Please enter a message"
+        },
+        "success": {
+          "title": "Submission Successful!",
+          "description": "Your form has been submitted successfully."
+        },
+        "error": {
+          "title": "Submission Failed!",
+          "description": "There was an error submitting your form."
+        },
+        "loading": {
+          "title": "Submitting...",
+          "description": "Your form is being submitted."
+        },
+        "alert": {
+          "stop-1": "Please do not enter any personal information as the information submitted on the demo form will be publicly available."
+        },
+        "submittedMessage": "Your form has been submitted.",
+        "newFormButton": "Open a New Form",
+        "submitButton": "Submit",
+        "loadingButton": "Submitting...",
+        "resetButton": "Reset",
+        "viewAnswerDetails": "View answer details"
+      }
+    },
+    "demo": {
+      "metadata": {
+        "title": "Demo"
+      }
+    }
+  }
+}
