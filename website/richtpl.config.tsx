@@ -13,7 +13,7 @@ const config: Config = {
   favicon: "/favicon.ico",
 
   // Production URL of the site
-  url: "https://gform-quick-submit.vercel.app",
+  url: "https://gform-quick-submit.fun117.dev",
 
   // Base URL pathname (for GitHub Pages deployment)
   baseUrl: "/",
@@ -55,27 +55,14 @@ const config: Config = {
     image: "/image/upload/front/nextjs/twitter-card.png",
     // Metadata for the site
     metadata: {
-      keywords: [
-        "Template",
-        "i18n",
-        "template",
-        "Next.js",
-        "autoprefixer",
-        "rich",
-        "tailwindcss",
-        "framer-motion",
-        "next-themes",
-        "vercel-hosting",
-        "next-intl",
-        "lucide-icons",
-      ],
+      keywords: ["Next.js", "Package", "Google Form"],
       authors: { name: "Fun117", url: "https://fun117.dev" },
       creator: "Fun117",
       icons: "/favicon.ico",
       generator: "Next.js",
       publisher: "Vercel",
       robots: "follow, index",
-      metadataBase: new URL("https://gform-quick-submit.vercel.app"),
+      metadataBase: new URL("https://gform-quick-submit.fun117.dev"),
     },
     SearchCommand: [
       {
