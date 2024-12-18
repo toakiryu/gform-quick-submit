@@ -46,7 +46,7 @@ export default function Page() {
                 </Button>
               </Link>
               <Link
-                href="https://github.com/Fun117/gform-quick-submit/wiki"
+                href="https://github.com/toakiryu/gform-quick-submit/wiki"
                 target="_blank"
               >
                 <Button variant="ghost">
@@ -55,7 +55,7 @@ export default function Page() {
                 </Button>
               </Link>
               <Link
-                href="https://github.com/Fun117/gform-quick-submit"
+                href="https://github.com/toakiryu/gform-quick-submit"
                 target="_blank"
               >
                 <Button variant="ghost">
