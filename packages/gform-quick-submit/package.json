@@ -11,15 +11,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Fun117 <fun117.kun@gmail.com> (https://fun117.dev)",
+  "author": "toakiryu <toakiryu@gmail.com> (https://fun117.dev)",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/fun117/gform-quick-submit.git",
+    "url": "git+ssh://git@github.com/toakiryu/gform-quick-submit.git",
     "directory": "packages/gform-quick-submit"
   },
   "bugs": {
-    "url": "https://github.com/fun117/gform-quick-submit/issues",
-    "email": "fun117.kun@gmail.com"
+    "url": "https://github.com/toakiryu/gform-quick-submit/issues",
+    "email": "toakiryu@gmail.com"
   },
   "homepage": "https://gform-quick-submit.fun117.dev",
   "license": "MIT",

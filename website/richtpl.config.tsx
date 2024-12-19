@@ -19,7 +19,7 @@ const config: Config = {
   baseUrl: "/",
 
   // GitHub deployment configuration
-  organizationName: "fun117", // GitHub organization/user name
+  organizationName: "toakiryu", // GitHub organization/user name
   projectName: "gform-quick-submit", // GitHub repository name
 
   // Internationalization (i18n) configuration
@@ -54,13 +54,13 @@ const config: Config = {
     // Metadata for the site
     metadata: {
       keywords: ["Next.js", "Package", "Google Form"],
-      authors: { name: "Fun117", url: "https://fun117.dev" },
-      creator: "Fun117",
+      authors: { name: "toakiryu", url: "https://toakiryu.dev" },
+      creator: "toakiryu",
       icons: "/favicon.ico",
       generator: "Next.js",
       publisher: "Vercel",
       robots: "follow, index",
-      metadataBase: new URL("https://gform-quick-submit.fun117.dev"),
+      metadataBase: new URL("https://gform-quick-submit.toakiryu.dev"),
     },
     SearchCommand: [
       {
