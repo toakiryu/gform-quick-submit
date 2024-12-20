@@ -32,32 +32,8 @@
       "About": "概要"
     }
   },
-  "Footer": {
-    "footerText": "著作権 © 2024 Fun117. 無断複写・転載を禁じます",
-    "items": {
-      "Resources": "リソース",
-      "Docs": "ドキュメント",
-      "Learn": "学ぶ",
-      "Showcase": "ショーケース",
-      "Blog": "ブログ",
-      "Analytics": "アナリティクス",
-      "Next&#46;js Conf": "Next.jsカンファレンス",
-      "Previews": "プレビュー",
-      "More": "その他",
-      "Next&#46;js Commerce": "Next.js コマース",
-      "Contact Sales": "コンタクトセールス",
-      "Releases": "リリース",
-      "Telemetry": "テレメトリ",
-      "Governance": "ガバナンス",
-      "About Vercel": "Vercelについて",
-      "Next&#46;js + Vercel": "Next.js + Vercel",
-      "Open Source Software": "オープンソースソフトウェア"
-    }
-  },
-  "Home": "ホーム",
-  "About": "概要",
   "footer": {
-    "footerText": "著作権 © 2024 Fun117. 無断複写・転載を禁じます"
+    "footerText": "著作権 © 2024 桐生トア. 無断複写・転載を禁じます"
   },
   "pages": {
     "home": {
