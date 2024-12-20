@@ -32,32 +32,8 @@
       "About": "About"
     }
   },
-  "Footer": {
-    "footerText": "Copyright © 2024 Fun117. All rights reserved.",
-    "items": {
-      "Resources": "Resources",
-      "Docs": "Docs",
-      "Learn": "Learn",
-      "Showcase": "Showcase",
-      "Blog": "Blog",
-      "Analytics": "Analytics",
-      "Next&#46;js Conf": "Next.js Conf",
-      "Previews": "Previews",
-      "More": "More",
-      "Next&#46;js Commerce": "Next.js Commerce",
-      "Contact Sales": "Contact Sales",
-      "Releases": "Releases",
-      "Telemetry": "Telemetry",
-      "Governance": "Governance",
-      "About Vercel": "About Vercel",
-      "Next&#46;js + Vercel": "Next.js + Vercel",
-      "Open Source Software": "Open Source Software"
-    }
-  },
-  "Home": "Home",
-  "About": "About",
   "footer": {
-    "footerText": "Copyright © 2024 Fun117. All rights reserved."
+    "footerText": "Copyright © 2024 Toa Kiryu. All rights reserved."
   },
   "pages": {
     "home": {
