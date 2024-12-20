@@ -13,7 +13,7 @@ const config: Config = {
   favicon: "/favicon.ico",
 
   // Production URL of the site
-  url: "https://gform-quick-submit.fun117.dev",
+  url: "https://gform-quick-submit.toakiryu.com",
 
   // Base URL pathname (for GitHub Pages deployment)
   baseUrl: "/",

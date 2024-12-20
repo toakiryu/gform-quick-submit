@@ -11,7 +11,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "toakiryu <toakiryu@gmail.com> (https://fun117.dev)",
+  "author": "toakiryu <toakiryu@gmail.com> (https://toakiryu.com)",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/toakiryu/gform-quick-submit.git",
@@ -21,7 +21,7 @@
     "url": "https://github.com/toakiryu/gform-quick-submit/issues",
     "email": "toakiryu@gmail.com"
   },
-  "homepage": "https://gform-quick-submit.fun117.dev",
+  "homepage": "https://gform-quick-submit.toakiryu.com",
   "license": "MIT",
   "keywords": [
     "google form",
