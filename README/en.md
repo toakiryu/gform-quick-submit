@@ -306,4 +306,4 @@ npm run dev
 
 This concludes the basic tutorial for integrating Google Forms with `gform-quick-submit`. You can now use this setup to quickly add forms to your website.
 
-Tutorial Source code: https://github.com/Fun117/gform-quick-submit/tree/main/templates/nextjs-tutorial
+Tutorial Source code: https://github.com/toakiryu/gform-quick-submit/tree/main/templates/nextjs-tutorial
