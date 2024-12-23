@@ -1,0 +1,8 @@
+{
+  "label": "Tutorial",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "GForm Quick Submit を使って、基本的なお問い合わせフォームを実装するチュートリアルです。"
+  }
+}

@@ -1,39 +1,39 @@
 # GForm Quick Submit Wiki
 
-This package allows you to quickly submit data to forms. Using this tool, you can easily integrate features like contact forms into your website. Since Google Forms is free to use, it’s also perfect for beginners.
+This package allows you to quickly send data to a form. With this tool, you can easily integrate forms like contact forms into your website. Since Google Forms is free to use, this package is ideal for beginners.
+
+For the latest documentation, please refer to the [official repository Wiki](https://github.com/toakiryu/gform-quick-submit/wiki).
 
 **Note**
 
-> Google Forms has a limit on the number of submissions, making it unsuitable for large-scale commercial use.
-
-- [Document](https://github.com/toakiryu/gform-quick-submit/wiki)
+> Google Forms has submission limits and is therefore not suitable for large-scale commercial use.
 
 # Tutorial
 
 This tutorial will guide you through creating a basic contact form.
 
 - [Create a Google Form](#1-create-a-google-form)
-- [Build an Input Form](#2-build-an-input-form)
-- [Setup and Explanation of the Package](#3-setup-and-explanation-of-the-package)
-  - [Configure from the Form Response Page URL](#configure-from-the-form-response-page-url)
-  - [Configure using the Form ID](#configure-using-the-form-id)
+- [Create an Input Form](#2-create-an-input-form)
+- [Setup and Configure the Package](#3-setup-and-configure-the-package)
+  - [Configure Using the Form's Response Page URL](#configure-using-the-forms-response-page-url)
+  - [Configure Using the Form ID](#configure-using-the-form-id)
 - [Retrieve Entry IDs](#4-retrieve-entry-ids)
 - [Set Up the Submission Function](#5-set-up-the-submission-function)
-- [Test the Form Submission](#6-test-the-form-submission)
+- [Test Submitting the Form](#6-test-submitting-the-form)
 
 ## 1. Create a Google Form
 
-Start by preparing your form. If you don’t already have one, create a new Google Form. For this tutorial, we’ll use the form shown in the image below.
+First, prepare your form. If you don't already have one, create a new Google Form. For this tutorial, we will use the form shown in the image below.
 
 **Note**
 
-> If your Google Form is not set to public, submissions might fail. Check the settings menu of your form and ensure that it doesn’t require responders to log in with a Google account.
+> If your Google Form is not publicly accessible, submissions may fail. In the "Settings" menu, ensure the form does not require users to log in with a Google account.
 
 ![GForm Quick Submit Template Form](https://github.com/user-attachments/assets/c4509126-5da2-44b3-9886-2d9dc06e55d7)
 
-## 2. Build an Input Form
+## 2. Create an Input Form
 
-### Setup and Install Packages
+### Setup and Install the Package
 
 ```bash
 npx create-next-app@latest nextjs-tutorial
@@ -43,9 +43,9 @@ npx create-next-app@latest nextjs-tutorial
 npm i zod react-hook-form @hookform/resolvers gform-quick-submit
 ```
 
-### Create the Form
+### Build the Form
 
-To learn more about creating forms, refer to the [React Hook Form](https://react-hook-form.com/) documentation. For this tutorial, copy the following code into your root page file. The `onSubmit` function is initially empty, but we will define it in the next step.
+Refer to the [react-hook-form](https://react-hook-form.com/) documentation if you want to learn more about creating forms. For this tutorial, paste the following code into the root page file. The `onSubmit` function is empty for now but will be completed in the next steps.
 
 ```page.tsx
 "use client";
@@ -57,14 +57,14 @@ import { z } from "zod";
 import { GFromQuickSubmitFormPOST } from "gform-quick-submit";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [formState, setFormState] = useState(false);
-  const [formError, setFormError] = useState(undefined);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [formState, setFormState] = useState<boolean>(false);
+  const [formError, setFormError] = useState<unknown | undefined>(undefined);
 
   const contactSchema = z.object({
     company: z.string().optional(),
     name: z.string().min(1, "Please enter your name"),
-    email: z.string().email("Enter a valid email address"),
+    email: z.string().email("Please enter a valid email address"),
     message: z.string().min(1, "Please enter a message"),
   });
 
@@ -79,7 +79,8 @@ export default function Home() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: ContactFormValues) => {};
+  const onSubmit = async (data: ContactFormValues) => {
+  };
 
   return (
     <div className="flex justify-center items-center w-full h-full min-h-dvh">
@@ -97,7 +98,7 @@ export default function Home() {
             <>
               <div className="flex flex-col gap-4 w-full">
                 <label htmlFor="company">
-                  <h2 className="mb-2">Company</h2>
+                  <h2 className="mb-2">Company Name</h2>
                   <input
                     id="company"
                     type="text"
@@ -195,117 +196,97 @@ export default function Home() {
 }
 ```
 
-## 3. Setup and Explanation of the Package
+## 3. Setup and Configure the Package
 
-In this step, we'll configure the `gform-quick-submit` package. You can choose one of the following two methods:
+To send data to Google Forms, you first need to configure the `gform-quick-submit` package. There are two ways to set it up:
 
-### Configure from the Form Response Page URL
+- Using the Form's Response Page URL
+- Using the Form ID
 
-1. Open the **Response Page** of your Google Form.
-2. Right-click on the page and select **Inspect**.
-3. Look for the form action URL (it should start with `https://docs.google.com/forms/u/...`).
-4. Copy and paste this URL into the `new GFormQuickSubmit()` constructor.
+### Configure Using the Form's Response Page URL
 
-For example:
-
-```typescript
-import { GFormQuickSubmit } from "gform-quick-submit";
-
-const gform = new GFormQuickSubmit(
-  "https://docs.google.com/forms/u/0/d/FORM_ID/formResponse"
-);
-```
+1. Open your Google Form and submit a test response.
+2. Navigate to the **Responses** tab and open the spreadsheet where the responses are stored.
+3. Copy the URL of the response page.
+4. Use this URL in the `GFormQuickSubmitFormPOST` function.
 
 ### Configure Using the Form ID
 
-Alternatively, you can use only the form's ID (you can find this in the Google Form URL after `/d/`).
+1. Open your Google Form and locate the Form ID in the URL.  
+   Example: In `https://docs.google.com/forms/d/e/1FAIpQLSfEXAMPLE/viewform`, the Form ID is `1FAIpQLSfEXAMPLE`.
+2. Use this Form ID in the configuration object.
 
-For example:
-
-```typescript
-import { GFormQuickSubmit } from "gform-quick-submit";
-
-const gform = new GFormQuickSubmit("FORM_ID");
-```
-
-**Note**
-
-> If you use the Form ID method, ensure your form is publicly accessible. Otherwise, the submission will fail.
+---
 
 ## 4. Retrieve Entry IDs
 
-Each field in your Google Form has a unique `entry ID`. You need these IDs to map the input fields in your website form to the corresponding fields in the Google Form.
+Each field in a Google Form is assigned a unique `entry ID`. This ID is required to correctly map your form fields to the data used in `gform-quick-submit`.
 
-### Finding Entry IDs
+To simplify the process of retrieving entry IDs, follow these steps:
 
-1. Open your Google Form's **Response Page**.
-2. Right-click on the field you want to inspect and select **Inspect**.
-3. Look for the `name` attribute of the `<input>` or `<textarea>` element. It will look something like `entry.123456`.
-4. Copy the number after `entry.`—this is the field's `entry ID`.
+### Use the Entry ID Detection Tool
 
-### Example
+1. Visit the [Entry ID Detection Tool](https://gform-quick-submit.toakiryu.com/entriesparse).
+2. Enter the URL of your Google Form and click the "Detect Entry IDs" button.
+3. The tool will display a list of field names and their corresponding entry IDs.
+4. Copy these entry IDs and use them in your configuration.
 
-For example, if your form has the following fields:
+> **Note**: If the tool is not functioning, refer to the manual method for inspecting the network tab (detailed below).
 
-- **Company**: `entry.123456`
-- **Name**: `entry.654321`
-- **Email**: `entry.987654`
-- **Message**: `entry.456789`
-
-You'll use these IDs in your submission function.
+---
 
 ## 5. Set Up the Submission Function
 
-Now, let's define the `onSubmit` function in your input form code.
+Now that you have the form URL or ID and the entry IDs, configure the `onSubmit` function.
 
-```typescript
+```page.tsx
+import { GFormQuickSubmitFormPOST } from "gform-quick-submit";
+
 const onSubmit = async (data: ContactFormValues) => {
   setIsLoading(true);
-  setFormState(false);
   setFormError(undefined);
 
   try {
-    // Initialize GFormQuickSubmit with your form's response URL or ID
-    const gform = new GFormQuickSubmit("FORM_ID");
-
-    // Map your form data to Google Form entry IDs
-    const result = await gform.submit({
-      "entry.123456": data.company,
-      "entry.654321": data.name,
-      "entry.987654": data.email,
-      "entry.456789": data.message,
+    const response = await GFormQuickSubmitFormPOST({
+      data: {
+        "entry.123456789": data.company,
+        "entry.987654321": data.name,
+        "entry.456789123": data.email,
+        "entry.654321987": data.message,
+      },
     });
 
-    console.log("Submission successful", result);
-    setFormState(true);
-    reset(); // Reset the form after successful submission
+    if (response.ok) {
+      setFormState(true);
+      reset();
+    } else {
+      throw new Error("Failed to submit the form.");
+    }
   } catch (error) {
-    console.error("Error submitting the form:", error);
-    setFormError("Failed to submit the form. Please try again.");
+    console.error("Error:", error);
+    setFormError(error.message);
   } finally {
     setIsLoading(false);
   }
 };
 ```
 
-## 6. Test the Form Submission
+Replace `YOUR_FORM_ID` and the `entry IDs` with the values from your Google Form.
 
-Finally, run your project and test the form submission.
+---
 
-1. Start your development server:
+## 6. Test Submitting the Form
+
+Run your application locally using the following command:
 
 ```bash
 npm run dev
 ```
 
-2. Open your form in a browser and fill it out.
-
-3. Click the **Submit** button.
-
-4. Check your Google Form response sheet to confirm that the data was submitted successfully.
+Access the form in your browser, fill out the fields, and submit the form. Check the Google Form's response spreadsheet to confirm that the data has been successfully submitted.
 
 ---
 
-This concludes the basic tutorial for integrating Google Forms with `gform-quick-submit`. You can now use this setup to quickly add forms to your website.
+## Conclusion
 
-Tutorial Source code: https://github.com/toakiryu/gform-quick-submit/tree/main/templates/nextjs-tutorial
+Congratulations! You have successfully integrated the `gform-quick-submit` package into your form. For further customization and advanced use cases, please refer to the [official repository Wiki](https://github.com/toakiryu/gform-quick-submit/wiki).

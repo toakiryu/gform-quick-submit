@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "次へ",
+    "description": "現在のバージョンのラベル"
+  },
+  "sidebar.documentSidebar.category.Tutorial": {
+    "message": "チュートリアル",
+    "description": "サイドバー documentSidebar のカテゴリー Tutorial のラベル"
+  },
+  "sidebar.documentSidebar.category.Tutorial.link.generated-index.description": {
+    "message": "GForm Quick Submit を使って、基本的なお問い合わせフォームを実装するチュートリアルです。",
+    "description": "サイドバー documentSidebar のカテゴリー Tutorial の生成されたインデックス ページの説明"
+  }
+}
