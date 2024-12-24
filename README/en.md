@@ -2,7 +2,7 @@
 
 This package allows you to quickly send data to a form. With this tool, you can easily integrate forms like contact forms into your website. Since Google Forms is free to use, this package is ideal for beginners.
 
-For the latest documentation, please refer to the [official repository Wiki](https://github.com/toakiryu/gform-quick-submit/wiki).
+For the latest documentation, please refer to the [official Wiki](https://gform-quick-submit-docs.vercel.app/en/).
 
 **Note**
 
@@ -289,4 +289,4 @@ Access the form in your browser, fill out the fields, and submit the form. Check
 
 ## Conclusion
 
-Congratulations! You have successfully integrated the `gform-quick-submit` package into your form. For further customization and advanced use cases, please refer to the [official repository Wiki](https://github.com/toakiryu/gform-quick-submit/wiki).
+Congratulations! You have successfully integrated the `gform-quick-submit` package into your form. For further customization and advanced use cases, please refer to the [official repository Wiki](https://gform-quick-submit-docs.vercel.app/).
