@@ -46,7 +46,7 @@ export default function Page() {
                 </Button>
               </Link>
               <Link
-                href="https://github.com/toakiryu/gform-quick-submit/wiki"
+                href="https://gform-quick-submit-docs.vercel.app"
                 target="_blank"
               >
                 <Button variant="ghost">
